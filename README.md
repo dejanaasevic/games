@@ -1,2 +1,2 @@
 # games
-summer projects (haos loši  ali šta je tu je)
+summer projects - haos loši but  it is what it is :/ 
