@@ -8,21 +8,13 @@ body{
     background-color: #FEE2DA;
 }
 .game{
-    padding-top: 100px;
+    padding-top: 60px;
     display: flex;
     align-content: center;
     justify-content: space-around;
     
 }
-h2{
-    font-size: 35px;
-    padding-bottom: 20px;
-    text-transform: uppercase;
-    padding-top:10px;
-    font-family: 'Roboto', sans-serif;
-    color: #745130;
-    justify-content: center;
-}
+
 .resultconteiner{
     padding-top: 50px;
     color: #FBB03B;
@@ -39,9 +31,34 @@ h1{
     text-align: center;
     
 }
+h2{
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    padding-top:10px;
+    font-family: 'Roboto', sans-serif;
+    color: #745130;
+    justify-content: center;
+}
+h4{
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top:5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #700000;
+    text-align: center;
+}
+.energy{
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+
 img{
     margin-right:20px;
     margin-left: 20px;
 }
-.computercontent{
+.image{
+    display: flex;
+    justify-content: center;
 }
