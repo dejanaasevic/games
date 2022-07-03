@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FEE2DA;
+}
+.game{
+    padding-top: 60px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    
+}
+
+.resultconteiner{
+    padding-top: 50px;
+    color: #FBB03B;
+    text-align: center;
+}
+
+
+h1{
+    font-size: 60px;
+    padding-top: 70px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: #700000;
+    text-align: center;
+    
+}
+h2{
+    font-size: 35px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+    padding-top:10px;
+    font-family: 'Roboto', sans-serif;
+    color: #745130;
+    justify-content: center;
+}
+h4{
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    padding-top:5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: #700000;
+    text-align: center;
+}
+.energy{
+    font-size: 20px;
+    padding-bottom: 0px;
+}
+
+img{
+    margin-right:20px;
+    margin-left: 20px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+}
