@@ -7,8 +7,29 @@
 body{
     background-color: #FEE2DA;
 }
+
+button{
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif; 
+    padding: 9px 25px;
+    background-color: rgba(215, 136, 109,0.9);
+    border: none;
+    border-radius:50px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(215, 136, 109,0.7);
+    transition: 0.7s;
+}
+#againbtn{
+    display: flex;
+    justify-content: space-around;
+}
+
 .game{
-    padding-top: 60px;
+    padding-top: 40px;
     display: flex;
     align-content: center;
     justify-content: space-around;
