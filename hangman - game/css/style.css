@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Playfair+Display:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#gametitle{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+#instructions{
+    text-align: center;
+    padding-bottom: 10px;
+}
+body{
+    background-color: black;
+    color: white;
+    padding: 0 30px;
+    font-family: 'IM Fell DW Pica', serif;
+    font-family: 'Playfair Display', serif;
+}
+
+#board{
+    display: flex;
+    margin: 20px; 
+    background-color: #febb75;
+    height: 90px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#container{
+    margin: 25px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+}
+
+#hangman{
+    background-color: #f2cac8;
+    height: 400px;
+    width: 720px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+#aphabet{
+    background-color: #fb948f;
+    height: 400px;
+    width: 720px;
+    border-radius: 20px;
+}
+
+#timer{
+    margin: 20px;
+    background-color: #c36b84;
+    height: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+#iconscontainer{
+    padding-left: 20px;
+}
+.icon{
+  margin-right: 10px;   
+}
