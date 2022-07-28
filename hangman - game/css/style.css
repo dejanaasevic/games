@@ -21,11 +21,12 @@ body{
     padding: 0 30px;
     font-family: 'IM Fell DW Pica', serif;
     font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
 }
 
 #board{
     display: flex;
-    margin: 20px; 
+    margin: 20px 90px; 
     background-color: #febb75;
     height: 90px;
     border-radius: 15px;
@@ -58,20 +59,49 @@ body{
 #aphabet{
     background-color: #fb948f;
     height: 400px;
-    width: 720px;
+    width: 420px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center
+}
+
+.letter{
+    color: black;
+    width: 30px;
+    height: 30px;
+    margin: 10px 15px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    border-width:thin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter:hover{
+    background:rgb(242, 202, 200,0.6);
+    transition: 0.5s;
 }
 
 #timer{
-    margin: 20px;
+    margin: 20px 90px;
     background-color: #c36b84;
     height: 40px;
     border-radius: 15px;
     text-align: center;
 }
+#timerdisplay{
+    padding: 7px 0;
+}
 #iconscontainer{
-    padding-left: 20px;
+    padding-left: 90px;
 }
 .icon{
   margin-right: 10px;   
 }
+
+
