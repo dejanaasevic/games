@@ -37,14 +37,16 @@ const hangmanPicture = document.getElementById('hangmanpicture');
 const passwordDisplay = document.getElementById('board');
 const instructionsDisplay = document.getElementById('instructions');
 const startAgainButton = document.getElementById('startagain');
+const audioButton  = document.getElementById('audio');
 const timerDisplay = document.getElementById('timerdisplay');
 const audioIcon = document.getElementById('audio');
 let password;  let generatedPassword; let mistakecount;
 
 
 let audioPlay = true;
-let audioYay = new Audio('tracks/yay.mp3'); let yayCount = 0;
-let audioWhat = new Audio('tracks/what.mp3'); let whatCount = 0;
+let audioYay = new Audio('tracks/yay.mp3'); let yayCount;
+let audioWhat = new Audio('tracks/what.mp3'); let  whatCount; 
+audioButton.addEventListener('click', updateAudio);
 
 let currentTime; let startTimer;
 setInterval(updateTimer, 1000);
@@ -54,7 +56,7 @@ startAgainButton.addEventListener('click', startAgain);
 initialiseGame();
 
 function initialiseGame(){
-    mistakecount=0; currentTime = 0; startTimer = false;
+    mistakecount=0; currentTime = 0; yayCount = 1; whatCount = 1; startTimer = false; audioPlay = true;
     instructionsDisplay.innerHTML = "how to play: try to guess the phrase by choosing the letters";
     hangmanPicture.src ="img/0.png";
     timerDisplay.innerHTML = "00:00:00";
@@ -103,8 +105,7 @@ function checkLetter(){
     let newPassword = '';
     for(let i=0; i<password.length;i++){
         if(password[i] === selectedLetter){
-            newPassword += selectedLetter;
-            audioYay.play();
+            newPassword += selectedLetter; 
             found = true;
         }
         else{newPassword+=generatedPassword[i];}
@@ -125,6 +126,21 @@ function checkLetter(){
            gameOver();
         }
     }
+    
+    if(found === true ){yayCount++;}
+    if(found === false){whatCount++;}
+    
+    if(yayCount%4 === 0 && audioPlay === true){
+        console.log(yayCount);
+        audioYay.play();
+        yayCount =1;
+    }
+    
+    if(whatCount%3 === 0 && audioPlay === true){
+        console.log(whatCount);
+        audioWhat.play();
+        whatCount =1;
+    }
             console.log(newPassword);
 }
 
@@ -137,9 +153,22 @@ function updateTimer(){
     let seconds = Math.floor(time%60);
     if(hours < 10){ hours = "0" + hours;}
     if(minutes < 10){ minutes = "0" + minutes;}
-    if(seconds<10){seconds= "0" + seconds;}
+    if(seconds < 10){seconds = "0" + seconds;}
     timerDisplay.innerHTML = hours + ":" + minutes + ":" + seconds;
     }
+}
+
+function updateAudio(){
+    if(audioPlay === true){
+        audioPlay = false;
+        audioButton.src = "img/noaudio.png";
+    }
+    
+    else if(audioPlay === false){
+        audioPlay = true;
+        audioButton.src = "img/audio.png";
+    }
+    
 }
 function gameOver(){
     instructionsDisplay.innerHTML ="you just lost the game, press the button below and start again";
@@ -169,4 +198,5 @@ function won(){
     }
     startTimer = false;
     alphabetDisplay.innerHTML = "congratulations you won!";
+    audioYay();
 }
