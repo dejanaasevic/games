@@ -99,8 +99,6 @@ function checkLetter(){
     clickedletter.style.color = 'white';
     clickedletter.removeEventListener('click',checkLetter);
     
-    console.log(password);
-    console.log(generatedPassword);
     
     let newPassword = '';
     for(let i=0; i<password.length;i++){
@@ -131,17 +129,14 @@ function checkLetter(){
     if(found === false){whatCount++;}
     
     if(yayCount%4 === 0 && audioPlay === true){
-        console.log(yayCount);
         audioYay.play();
         yayCount =1;
     }
     
     if(whatCount%3 === 0 && audioPlay === true){
-        console.log(whatCount);
         audioWhat.play();
         whatCount =1;
     }
-            console.log(newPassword);
 }
 
 function updateTimer(){
