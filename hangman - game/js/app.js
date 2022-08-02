@@ -117,10 +117,10 @@ function checkLetter(){
         }
     }
     
-    else if (mistakecount <=5){
+    else if (mistakecount <=6){
         mistakecount++;
         hangmanPicture.src = "img/" + mistakecount + ".png";
-        if(mistakecount === 6){
+        if(mistakecount === 7){
            gameOver();
         }
     }
